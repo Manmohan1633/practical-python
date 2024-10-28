@@ -4,14 +4,17 @@
 principal = 500000.00
 rate = 0.05
 payment = 2684.11
-extra = 1000.00
+extra_payment_start_month = 61
+extra_payment_end_month = 108
+extra_payment = 1000
+
 month = 0
 total_paid = 0.00
 while principal > 0:
     principal = principal*(1+rate/12)-payment
     month +=1
     total_paid += payment
-    if month <=12:
-        total_paid +=extra
-        principal -=extra
+    if month <=108 and month>=61:
+        total_paid +=extra_payment
+        principal -=extra_payment
 print(total_paid, month)
