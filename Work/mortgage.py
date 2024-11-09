@@ -20,4 +20,4 @@ while principal > 0:
         if month <=108 and month>=61:
             total_paid +=extra_payment
             principal -=extra_payment
-    print(month, total_paid, principal)
+    print(f'It will take {month} to pay toal value of ${total_paid} for principL amount of ${principal}')
